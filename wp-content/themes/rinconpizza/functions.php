@@ -33,20 +33,22 @@ add_action( 'wp_enqueue_scripts','assets');
 
 
 function sidebar(){
-    register_sidebar( 
-        array(
-          'name' => 'Pie de página',
+  register_sidebar(
+      array(
+          'name' => 'Pie de pagina',
           'id' => 'footer',
-          'description' => 'Zona de Widgets para pie de página',
+          'description' => 'Zona de Widgets para pie de pagina',
           'before_title' => '<p>',
           'after_title' => '</p>',
-          'before_widget' => '<div id="%1$s" class="%2$s">',
-          'after_widget' => '</div>',
-        )
+          'before_widget' => '<div id="%1$s" class= "%2$s">',
+          'after_widget'  => '</div>',
+      )    
       );
   
-  }
-  add_action('widgets_init','sidebar');
+}
+
+
+  add_action( 'widgets_init','sidebar');
 
 
   function productos_type(){
